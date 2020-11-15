@@ -6,11 +6,11 @@ SET(CMAKE_CXX_STANDARD 11)
 SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 ADD_EXECUTABLE(main
-    //files used in main
+    main.cpp
 )
 
 ADD_EXECUTABLE(test
-    //unit test hpp/cpp files
+    test.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
