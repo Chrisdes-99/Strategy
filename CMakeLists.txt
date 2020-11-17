@@ -5,12 +5,10 @@ ADD_SUBDIRECTORY(googletest)
 SET(CMAKE_CXX_STANDARD 11)
 SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-ADD_EXECUTABLE(main
-    main.cpp
-)
-
 ADD_EXECUTABLE(test
-    test.cpp
+    unit_test.cpp
+    ListContainer.cpp
+    BubbleSort.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
