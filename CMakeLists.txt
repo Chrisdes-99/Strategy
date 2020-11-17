@@ -8,6 +8,7 @@ SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 ADD_EXECUTABLE(test
     unit_test.cpp
     ListContainer.cpp
+    BubbleSort.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)

@@ -2,11 +2,9 @@
 #include <list>
 #include "./Lab-04-Composite/op.hpp"
 #include <iostream>
-
+#include <stdexcept>
 using namespace std;
-/*constructors*/
 
-/*functions*/
 
 void ListContainer::add_element(Base* element) {
     //l_container is our list
@@ -21,7 +19,12 @@ void ListContainer::print() {
 }
 
 void ListContainer::sort() {
-    int i = 0;
+    if (sort_function != nullptr) {
+       this->sort_function->sort(l_container); 
+    }
+    else {
+        throw runtime_error("Sort Function is null"); 
+    }
 }
 
 void ListContainer::swap(int i, int j) {
