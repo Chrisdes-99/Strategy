@@ -3,12 +3,11 @@
 void BubbleSort::sort(Container* container) {
    auto i(0);
    auto j(0);
-   for (; i < container->size()-1; i++) {
-        for (; j < (container->size()-i-1); j++) {
-            container->swap(j, j+1);
-            //if (container->at(j)->evaluate() > container->at(j + 1)->evaluate()) {
-            //    container->swap(j, j+1);
-            //}
+   for (i=0; i < container->size()-1; i++) {
+        for (j=0; j < (container->size()-i-1); j++) { 
+            if (container->at(j)->evaluate() > container->at(j + 1)->evaluate()) {
+                container->swap(j, j+1);
+            }
         }
 
    }

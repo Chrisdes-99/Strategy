@@ -12,7 +12,7 @@ class ListContainer : public Container {
     list<Base*> l_container;
 
  public:
-    /* Constructors */
+    
 
     void add_element(Base* element);
     void print();

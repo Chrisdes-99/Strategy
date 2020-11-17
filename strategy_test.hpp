@@ -17,9 +17,13 @@
 #include "./Lab-04-Composite/mult.hpp"
 #include "./Lab-04-Composite/div.hpp"
 
+//=====SelectionSort+VectorContainer=====
 
+//=====SelectionSort+ListContainer=====
 
+//=====BubbleSort+VectorContainer=====
 
+//=====BubbleSort+ListContainer=====
 TEST(SortTestSet, BubbleSortTest) {
     Op* seven = new Op(7);
     Op* four = new Op(4);
@@ -53,18 +57,24 @@ TEST(SortTestSet, BubbleSortTest) {
 
 }
 
+//=====VectorContainer=====
 
-//------------------------------
+//=====ListContainer=====
 TEST(ListTest, AddTest) {
     Op* seven = new Op(7);
+    Op* nine = new Op(9);
+    Add* TreeA = new Add(seven, nine);
     ListContainer* test_container = new ListContainer();
 
     test_container->add_element(seven);
+    test_container->add_element(nine);
+    test_container->add_element(TreeA);
 
-    ASSERT_EQ(test_container->size(), 1);
+    ASSERT_EQ(test_container->size(), 3);
     EXPECT_EQ(test_container->at(0)->evaluate(), 7);
+    EXPECT_EQ(test_container->at(1)->evaluate(), 9);
+    EXPECT_EQ(test_container->at(2)->evaluate(), 16);
 }
-
 
 TEST(ListTest, SwapTest) {
     Op* seven = new Op(7);
@@ -88,7 +98,10 @@ TEST(ListTest, PrintTest) {
     test->add_element(eight);
 
     ASSERT_EQ(test->size(), 2);
-    
+    cout << "Expected: " << "7.000000 " << "8.000000" << endl;
+    cout << "PrintTest: ";
+    test->print();
+    cout << endl;
     //testing::internal::CaptureStdout();
     //std::cout << test->print();
     //std::string output = testing::internal::GetCapturedStdout();
@@ -103,6 +116,7 @@ TEST(ListTest, atTest) {
     test_container->add_element(eight);
 
     EXPECT_EQ(test_container->at(0)->evaluate(), 7);
+    EXPECT_EQ(test_container->at(1)->evaluate(), 8);
 }
 
 TEST(ListTest, sizeTest) {

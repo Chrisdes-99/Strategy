@@ -20,7 +20,7 @@ void ListContainer::print() {
 
 void ListContainer::sort() {
     if (sort_function != nullptr) {
-       this->sort_function->sort(l_container); 
+       this->sort_function->sort(this); 
     }
     else {
         throw runtime_error("Sort Function is null"); 
