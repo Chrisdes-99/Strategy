@@ -9,8 +9,5 @@ void BubbleSort::sort(Container* container) {
                 container->swap(j, j+1);
             }
         }
-
    }
-    
-
 };

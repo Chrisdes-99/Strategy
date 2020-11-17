@@ -3,7 +3,6 @@
 
 #include "sort.hpp"
 #include "base.hpp"
-
 class Sort;
 class Base;
 
