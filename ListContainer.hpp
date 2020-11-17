@@ -12,8 +12,6 @@ class ListContainer : public Container {
     list<Base*> l_container;
 
  public:
-    
-
     void add_element(Base* element);
     void print();
     void sort();
